@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Add Form</title>
+
+</head>
+<body>
+	<section>
+		<div class="container">
+			<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">#ID</th>
+								<th scope="col">Name</th>
+								<th scope="col">Email</th>
+								<th scope="col">Phone</th>
+
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr th:each="c : ${contact}">
+								<th scope="row" th:text="${'SCM2022'+c.cId}"></th>
+								<td><img class="my_profile_pic"
+									th:src="@{'/img/'+${c.image}}" alt="profile Photo" /> <span
+									th:text="${c.name+' ('+c.secondName+')'}"> </span></td>
+
+								<td>
+									<!-- <a href="" th:href="@{'/user/contact/'+${c.cId}}"><span th:text="${c.email}"></span></a> -->
+									<span th:text="${c.email}"></span>
+								</td>
+								<td th:text="${c.phone}"></td>
+
+							</tr>
+						</tbody>
+					</table>
+		</div>
+		
+	</section>
+
+</body>
+</html>

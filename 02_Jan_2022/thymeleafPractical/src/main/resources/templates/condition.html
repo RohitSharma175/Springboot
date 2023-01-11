@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">  
+<head>
+	<meta charset="UTF-8" />
+	<title>Example of conditional   </title>
+</head>
+<body>
+	<h1>Going to traverse elements in collection ...</h1>
+	<h1>User is <span th:style="${isActive} ? 'color : green' : 'color : red'" th:text="${isActive} ? 'Active' : 'Not Active'"></span></h1>
+	
+	<h1 th:if="${gender}=='M'">Male</h1>
+	<h1 th:unless="${gender}=='F'">Female</h1>
+	
+	<div th:switch="${#lists.size(myList)}">
+		<h1 th:case="'0'">List contain Zero elements</h1>
+		<h1 th:case="'2'">List contain two elements</h1>
+		<h1 th:case="'3'">List contain three elements</h1>
+		<h1 th:case="'5'">List contain five elements</h1>
+		<h1 th:case="*">List contain more than 5 elements</h1>
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">  
+<head>
+	<meta charset="UTF-8" />
+	<title>service page  </title>
+</head>
+<body>
+	<h1>this is service provide by rohit</h1>
+	<!-- adding footer -->
+	
+	<!-- <footer th:insert="footer::footer1" >
+	
+	</footer>
+	
+	<footer th:include="footer::footer1" >
+	
+	</footer> -->
+	
+	
+	<!-- <footer th:replace="footer::footer1('this is title','this is subtitle')" >
+	
+	</footer> -->
+	<footer th:replace="footer::footer1(${title},${subtitle})" >
+	
+	</footer>
+	
+	
+	
+</body>
+</html>

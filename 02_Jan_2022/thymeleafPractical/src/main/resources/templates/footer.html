@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">  
+<head>
+	<meta charset="UTF-8" />
+	<title>footer template</title>
+</head>
+<body>
+	
+	<footer th:fragment="footer1(title,subtitle)">
+		<div class="container" >
+			<h1 th:text="${title}"></h1>
+			<h1 th:text="${subtitle}"></h1>
+			<h1>test rohti 2 </h1>
+		</div>
+	</footer>
+</body>
+</html>
